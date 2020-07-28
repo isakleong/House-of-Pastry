@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Detail Product </title>
+	<!-- Fav Icon di bar -->
+	<link rel="shortcut icon" type="image/png" href="img/logo1.jpg"> 
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="home.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+
+	<script type="text/javascript">
+		// var angka=document.getElementsByName("belii");
+		// angka[0].value=1;
+
+		function cek(tombol){
+			var angka=document.getElementsByName('belii');
+			var temp=parseInt(angka[0].value);
+			if(tombol=="tambah"){
+				temp+=1;
+				angka[0].value=temp;
+			}
+			else{
+				if(temp>0){
+					temp-=1;
+					angka[0].value=temp;
+				}
+				
+			}
+		}
+	</script>
+</head>
+<body>
+	
+		<table>
+			<table>
+				<tr>
+					<td><button class="btn btn-light" name="tambah" value="+" onclick="cek('tambah')"></button></td>
+					<td><input type="text" name="belii" value="1"></td>
+					<td><button class="btn btn-light" name="kurang" value="-" onclick="cek('kurang')"></button></td>
+				</tr>
+			</table>
+		</table>
+	
+
+</body>
+</html>
